@@ -17,6 +17,8 @@
       <div class="form-group">
         <label>Plot:</label>
         <input type="text" class="form-control" v-model="plot">
+        <small v-if="plot.length <= 250">Characters remaining: {{250 - plot.length}}</small>
+        <small v-if="plot.length > 250" class="text-danger">Character count: {{plot.length}} - Please limit length to 250 characters.</small>
       </div>
       <div class="form-group">
         <label>Director:</label>
